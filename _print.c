@@ -44,7 +44,7 @@ void _puts(char *str)
  * Return: The number of characters
  */
 
-int _printf(char *format, ...)
+int _printf(const char *format, ...)
 {
 	unsigned int i = 0, j = 0;
 	int len1, len2;
