@@ -3,14 +3,14 @@
 #include <stdarg.h>
 
 /**
- * _strlen - Calculate the length of a string 
- * 
- * @s: The string 
+ * _strlen - Calculate the length of a string
+ * @s: The string
  * Return: The length of s
  */
 int _strlen(char *s)
 {
     int i;
+
     for (i = 0; s[i] != '\0'; i++)
         ;
     return (i);
@@ -18,12 +18,12 @@ int _strlen(char *s)
 
 /**
  * _printf - Print input to sdout
- * 
- * @format: The input format 
+ * @format: The input format
  * Return: The number of characters
  */
 int _printf(char *format, ...)
 {
+
     unsigned int i = 0, j = 0;
     int len1, len2;
     char *s;
@@ -51,7 +51,6 @@ int _printf(char *format, ...)
                 s = va_arg(arg, char *);
                 len2 = _strlen(s);
                 puts(s);
-
                 break;
             }
             }
@@ -60,5 +59,5 @@ int _printf(char *format, ...)
     }
     va_end(arg);
     putchar('\n');
-    return (len1+len2);
+    return (len1 + len2);
 }
