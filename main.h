@@ -2,5 +2,5 @@
 #define _main_h_
 int _printf(const char *format, ...);
 int _putchar(char c);
-void _puts(char *str);
+int _print_str(char *string);
 #endif
