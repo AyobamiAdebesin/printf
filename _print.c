@@ -42,7 +42,7 @@ int _printf(char *format, ...)
             {
                 i = va_arg(arg, int);
                 len1 = 1;
-                putchar(i);
+                _putchar(i);
                 j++;
                 break;
             }
