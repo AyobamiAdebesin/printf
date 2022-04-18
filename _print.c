@@ -51,7 +51,7 @@ int _printf(char *format, ...)
 				case 's':
 				{
 					s = va_arg(arg, char *);
-					len2 = strlen(s);
+					len2 = _strlen(s);
 					puts(s);
 					break;
 				}
