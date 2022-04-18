@@ -81,6 +81,6 @@ int _printf(char *format, ...)
 		i++;
 	}
 	va_end(arg);
-	putchar('\n');
+	_putchar('\n');
 	return (len1 + len2);
 }
