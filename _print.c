@@ -18,6 +18,27 @@ int _strlen(char *s)
 }
 
 /**
+ * _puts - A function that prints a string followed by a new line
+ * @str: input string
+ * Return: void
+ */
+void _puts(char *str)
+{
+	int count = 0;
+
+	while (count >= 0)
+	{
+		if (str[count] == '\0')
+		{
+			_putchar('\n');
+			break;
+		}
+		_putchar(str[count]);
+		count++;
+	}
+}
+
+/**
  * _printf - print the input to stdout
  * @format: The input format
  * Return: The number of characters
@@ -52,7 +73,7 @@ int _printf(char *format, ...)
 				{
 					s = va_arg(arg, char *);
 					len2 = _strlen(s);
-					puts(s);
+					_puts(s);
 					break;
 				}
 			}
