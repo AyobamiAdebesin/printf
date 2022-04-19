@@ -1,4 +1,5 @@
 #include "main.h"
+
 #include <stdio.h>
 #include <stdarg.h>
 
@@ -14,7 +15,7 @@ int _strlen(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 		;
-	return (i - 1);
+	return (i);
 }
 
 /**
