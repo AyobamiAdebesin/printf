@@ -50,6 +50,8 @@ int _printf(const char *format, ...)
 	char *s;
 	va_list arg;
 
+	if (format == NULL)
+		return (0);
 	va_start(arg, format);
 	for (i = 0; (format && *(format + i) != '\0'); i++)
 	{
