@@ -9,13 +9,16 @@
  */
 int main(void)
 {
-    int len2 = _printf("Let's try to printf a simple sentence.\n");
-    printf("Len:[%d]\n", len2);
+    int len1, len2, len3;
+    len1 = _printf("Let's try to printf a simple sentence.\n");
+    printf("Len:[%d]\n", len1);
 
-    _printf("Character:[%c]\n", 'H');
+    len2 = _printf("Character:[%c]\n", 'H');
+    printf("Len:[%d]\n", len2);
     printf("Character:[%c]\n", 'H');
-    _printf("String:[%s]\n", "I am a string !");
+    len3 = _printf("String:[%s]\n", "I am a string !");
     printf("String:[%s]\n", "I am a string !");
+    printf("Len:[%d]\n", len3);
 
     return (0);
 }
