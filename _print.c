@@ -74,7 +74,7 @@ int _printf(const char *format, ...)
 				case '%':{
 					s = va_arg(arg, char *);
 					len1 += 1;
-					_putchar(s);
+					_puts(s);
 					break; }
 			}
 		}
