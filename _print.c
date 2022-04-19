@@ -74,6 +74,11 @@ int _printf(const char *format, ...)
 					_puts(s);
 					break;
 				}
+				case '%':
+				{
+					_putchar('%');
+					len1 += 1;
+					break;
 			}
 		}
 		else
