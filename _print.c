@@ -30,7 +30,7 @@ void _puts(char *str)
     {
         if (str[count] == '\0')
         {
-           /* _putchar('\n');*/
+            /* _putchar('\n');*/
             break;
         }
         _putchar(str[count]);
@@ -46,15 +46,16 @@ void _puts(char *str)
 
 int _printf(const char *format, ...)
 {
-    unsigned int i = 0;
+    int i = 0;
     int len1 = 0;
     int len2 = 0;
+    unsigned int j;
     char *s;
 
     va_list arg;
 
     va_start(arg, format);
-    for (i = 0; (format && format[i] != '\0'); i++)
+    for (i = 0; (format && *(format + i) != '\0'); i++)
     {
         if (format[i] == '%')
         {
@@ -63,10 +64,9 @@ int _printf(const char *format, ...)
             {
             case 'c':
             {
-                i = va_arg(arg, int);
+                j = va_arg(arg, int);
                 len1 += 1;
-                _putchar(i);
-                _putchar('\n');
+                _putchar(j);
                 break;
             }
 
@@ -75,6 +75,11 @@ int _printf(const char *format, ...)
                 s = va_arg(arg, char *);
                 len2 = _strlen(s);
                 _puts(s);
+                break;
+            }
+            case '%':
+            {
+                _putchar('%');
                 break;
             }
             default:
