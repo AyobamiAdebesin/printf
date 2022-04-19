@@ -63,7 +63,7 @@ int _printf(const char *format, ...)
 			{
 				case 'c':{
 					j = va_arg(arg, int);
-					len1 += 1;
+					len1 = 1;
 					_putchar(j);
 					break;
 				}
@@ -74,7 +74,7 @@ int _printf(const char *format, ...)
 					break; }
 				case '%':{
 					_putchar('%');
-					len1 += 1;
+					len1 = 1;
 					break; }
 			}
 		}
