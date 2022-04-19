@@ -1,50 +1,49 @@
-#ifndef _main_h_
-#define _main_h_
+#ifndef _PRINTF_H_
+#define _PRINTF_H_
+
+#define BUFSIZE 1024
+
+/* Importing Libraries */
 
 #include <stdio.h>
+#include <unistd.h>
 #include <stdlib.h>
 #include <stdarg.h>
-#include <limits.h>
-#include <unistd.h>
 
-
+/* Type Definitions */
 
 /**
- * struct format - match the conversion specifiers for printf
- * @id: type char pointer of the specifier i.e (l, h) for (d, i, u, o, x, X)
- * @f: type pointer to function for the conversion specifier
- *
+ * struct printer - structure for printing various types
+ * @symbol: type to print
+ * @func_t: function to print
  */
 
-typedef struct format
+typedef struct printer
 {
-	char *id;
-	int (*f)();
-} convert_match;
+	const char symbol;
+	int (*func_t)(va_list);
+} printer_t;
 
-int printf_pointer(va_list val);
-int printf_hex_aux(unsigned long int num);
-int printf_HEX_aux(unsigned int num);
-int printf_exclusive_string(va_list val);
-int printf_HEX(va_list val);
-int printf_hex(va_list val);
-int printf_oct(va_list val);
-int printf_unsigned(va_list args);
-int printf_bin(va_list val);
-int printf_srev(va_list args);
-int printf_rot13(va_list args);
-int printf_int(va_list args);
-int printf_dec(va_list args);
-int _strlen(char *s);
-int *_strcpy(char *dest, char *src);
-int _strlenc(const char *s);
-int rev_string(char *s);
-int _strlenc(const char *s);
-int printf_37(void);
-int printf_char(va_list val);
-int printf_string(va_list val);
-int _putchar(char c);
+/* Function Prototypes */
+
+int _write(char c);
 int _printf(const char *format, ...);
+int print_char(va_list arguments);
+int print_string(va_list arguments);
+int print_percent(__attribute__((unused))va_list arguments);
+int print_i(va_list arguments);
+int print_d(va_list arguments);
+int (*get_flag_func(const char s))(va_list);
+int print_integer(va_list arguments);
+int print_decimal(va_list arguments);
+int binary_recursive(unsigned int num, int len);
+int print_binary(va_list arguments);
+int print_unint(va_list arguments);
+int print_octal(va_list args);
+int rot13(va_list arguments);
+char *_memcpy(char *dest, char *src, unsigned int n);
+char *rev_str(char *s);
+int print_reversed(va_list arg);
+int (*func_t)(va_list);
 
-#endif
-
+#endif /* _PRINTF_H_ */
