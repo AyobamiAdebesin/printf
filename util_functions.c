@@ -21,3 +21,4 @@ int _print_str(char *string)
 		return (_print_str("(null)"));
 	return (count);
 }
+
