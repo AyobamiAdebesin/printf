@@ -10,11 +10,11 @@
 
 int _strlen(char *s)
 {
-    int i;
+	int i;
 
-    for (i = 0; s[i] != '\0'; i++)
-        ;
-    return (i);
+	for (i = 0; s[i] != '\0'; i++)
+		;
+	return (i);
 }
 
 /**
@@ -24,17 +24,17 @@ int _strlen(char *s)
  */
 void _puts(char *str)
 {
-    int count = 0;
+	int count = 0;
 
-    while (count >= 0)
-    {
-        if (str[count] == '\0')
-        {
-            break;
-        }
-        _putchar(str[count]);
-        count++;
-    }
+	while (count >= 0)
+	{
+		if (str[count] == '\0')
+		{
+			break;
+		}
+		_putchar(str[count]);
+		count++;
+	}
 }
 
 /**
@@ -45,44 +45,41 @@ void _puts(char *str)
 
 int _printf(const char *format, ...)
 {
-    unsigned int i = 0, j = 0;
-    int len1 = 0, len2 = 0;
-    char *s;
-    va_list arg;
+	unsigned int i = 0, j = 0;
+	int len1 = 0, len2 = 0;
+	char *s;
+	va_list arg;
 
-    if (format == NULL)
-        return (0);
-
-    va_start(arg, format);
-    for (i = 0; (format && *(format + i) != '\0'); i++)
-    {
-        if (format[i] == '%')
-        {
-            i++;
-            switch (format[i])
-            {
-            case 'c':
-            {
-                j = va_arg(arg, int);
-                len1 += 1;
-                _putchar(j);
-                break;
-            }
-            case 's':
-            {
-                s = va_arg(arg, char *);
-                len2 = _strlen(s);
-                _puts(s);
-                break;
-            }
-            }
-        }
-        else
-        {
-            _putchar(format[i]);
-            len1 += 1;
-        }
-    }
-    va_end(arg);
-    return (len1 + len2);
+	va_start(arg, format);
+	for (i = 0; (format && *(format + i) != '\0'); i++)
+	{
+		if (format[i] == '%')
+		{
+			i++;
+			switch (format[i])
+			{
+				case 'c':
+				{
+					j = va_arg(arg, int);
+					len1 += 1;
+					_putchar(j);
+					break;
+				}
+				case 's':
+				{
+					s = va_arg(arg, char *);
+					len2 = _strlen(s);
+					_puts(s);
+					break;
+				}
+			}
+		}
+		else
+		{
+			_putchar(format[i]);
+			len1 += 1;
+		}
+	}
+	va_end(arg);
+	return (len1 + len2);
 }
