@@ -81,7 +81,7 @@ int _printf(const char *format, ...)
 		else
 		{
 			_putchar(format[i]);
-			len += 1;
+			len1 += 1;
 		}
 	}
 	va_end(arg);
