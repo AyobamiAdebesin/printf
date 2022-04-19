@@ -9,7 +9,7 @@
  */
 int main(void)
 {
-    int len1, len2, len3;
+    int len1, len2, len3, len4;
     len1 = _printf("Let's try to printf a simple sentence.\n");
     printf("Len:[%d]\n", len1);
 
@@ -19,5 +19,7 @@ int main(void)
     len3 = _printf("String:[%s]\n", "I am a string !");
     printf("Len:[%d]\n", len3);
 
+    len4 = _printf("Percent:[%%]\n");
+    printf("Len:[%d]\n", len4);
     return (0);
 }
