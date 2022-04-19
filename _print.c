@@ -47,7 +47,7 @@ void _puts(char *str)
 int _printf(const char *format, ...)
 {
 	unsigned int i = 0, j = 0;
-	int total;
+	int len1 = 0, len2 = 0;
 	char *s;
 	va_list arg;
 
@@ -63,27 +63,27 @@ int _printf(const char *format, ...)
 			{
 				case 'c':{
 					j = va_arg(arg, int);
-					total += 1;
+					len1 += 1;
 					_putchar(j);
 					break;
 				}
 				case 's':{
 					s = va_arg(arg, char *);
-					total += _strlen(s);
+					len2 += _strlen(s);
 					_puts(s);
 					break; }
 				case '%':{
 					_putchar('%');
-					total += 1;
+					len1 += 1;
 					break; }
 			}
 		}
 		else
 		{
 			_putchar(format[i]);
-			total += 1;
+			len += 1;
 		}
 	}
 	va_end(arg);
-	return (total);
+	return (len1 + len2);
 }
