@@ -70,8 +70,7 @@ int _printf(const char *format, ...)
 					s = va_arg(arg, char *);
 					len2 = _strlen(s);
 					_puts(s);
-					break;
-				}
+					break; }
 				case '%':{
 					_putchar('%');
 					len1 += 1;
@@ -81,6 +80,7 @@ int _printf(const char *format, ...)
 		else
 		{
 			_putchar(format[i]);
+			len1 += 1;
 		}
 	}
 	va_end(arg);
