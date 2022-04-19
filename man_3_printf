@@ -1,0 +1,26 @@
+./" Manpage for _printf
+.TH _printf "2022-04-19" "_printf manpage"
+.SH NAME
+_printf(3)
+.SH SYNOPSIS
+#include <stdio.h>
+#include "main.h"
+
+int _printf(const char *format, ...);
+.SH DESCRIPTION
+A function that products output according to a format string.
+It specifies the variable length and convert it to output.
+Format string is a character string that begins and ends in its initial state. It start its conversion with introduction of %.
+.SH OPTIONS
+.IP -c
+prints character
+.IP -s
+prints string
+.IP -u
+prints unsigned decimal integer
+.IP -X 
+print unsigned hexadecimal integer
+.IP -x
+also prints unsigned hexadecimal integer
+.SH AUTHORS
+(Nneka Chukwuemeka and Ayobami Adebesin)
