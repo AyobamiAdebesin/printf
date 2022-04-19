@@ -14,7 +14,7 @@ int _strlen(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 		;
-	return (i);
+	return (i - 1);
 }
 
 /**
@@ -68,7 +68,7 @@ int _printf(const char *format, ...)
 				}
 				case 's':{
 					s = va_arg(arg, char *);
-					len2 = _strlen(s);
+					len2 += _strlen(s);
 					_puts(s);
 					break; }
 				case '%':{
