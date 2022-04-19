@@ -24,18 +24,18 @@ int _strlen(char *s)
  */
 void _puts(char *str)
 {
-	int count = 0;
+    int count = 0;
 
-	while (count >= 0)
-	{
-		if (str[count] == '\0')
-		{
-			_putchar('\n');
-			break;
-		}
-		_putchar(str[count]);
-		count++;
-	}
+    while (count >= 0)
+    {
+        if (str[count] == '\0')
+        {
+           /* _putchar('\n');*/
+            break;
+        }
+        _putchar(str[count]);
+        count++;
+    }
 }
 
 /**
@@ -47,13 +47,14 @@ void _puts(char *str)
 int _printf(const char *format, ...)
 {
     unsigned int i = 0;
-    int len1, len2;
+    int len1 = 0;
+    int len2 = 0;
     char *s;
 
     va_list arg;
 
     va_start(arg, format);
-    while (format && format[i])
+    for (i = 0; (format && format[i] != '\0'); i++)
     {
         if (format[i] == '%')
         {
@@ -76,6 +77,10 @@ int _printf(const char *format, ...)
                 _puts(s);
                 break;
             }
+            default:
+                _putchar('%');
+                _putchar(format[i]);
+                break;
             }
         }
         else
@@ -83,8 +88,6 @@ int _printf(const char *format, ...)
             _putchar(format[i]);
             len1 += 1;
         }
-        
-        i++;
     }
     va_end(arg);
     return (len1 + len2);
