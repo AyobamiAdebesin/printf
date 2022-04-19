@@ -46,7 +46,7 @@ void _puts(char *str)
 int _printf(const char *format, ...)
 {
 	unsigned int i = 0, j = 0;
-	int len1 = -1, len2 = 0;
+	int len1 = 0, len2 = 0, len3 = 0;
 	char *s;
 	va_list arg;
 
@@ -80,7 +80,7 @@ int _printf(const char *format, ...)
 		else
 		{
 			_putchar(format[i]);
-			len1 += 1;
+			len3 += 1;
 		}
 	}
 	va_end(arg);
