@@ -60,32 +60,27 @@ int _printf(const char *format, ...)
 			i++;
 			switch (format[i])
 			{
-				case 'c':
-				{
+				case 'c':{
 					j = va_arg(arg, int);
 					len1 += 1;
 					_putchar(j);
 					break;
 				}
-				case 's':
-				{
+				case 's':{
 					s = va_arg(arg, char *);
 					len2 = _strlen(s);
 					_puts(s);
 					break;
 				}
-				case '%':
-				{
+				case '%':{
 					_putchar('%');
 					len1 += 1;
-					break;
-				}
+					break; }
 			}
 		}
 		else
 		{
 			_putchar(format[i]);
-			len1 += 1;
 		}
 	}
 	va_end(arg);
