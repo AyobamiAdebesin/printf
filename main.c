@@ -30,7 +30,7 @@ int main(void)
 
     len4a = _printf("Percent:[%%]\n");
     len4b = printf("Percent:[%%]\n");
-    _printf("Len4a:[%d]\n", len4a);
+    printf("Len4a:[%d]\n", len4a);
     printf("Len4b:[%d]\n", len4b);
 
 
