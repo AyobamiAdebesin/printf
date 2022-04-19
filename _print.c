@@ -79,6 +79,7 @@ int _printf(const char *format, ...)
 					_putchar('%');
 					len1 += 1;
 					break;
+				}
 			}
 		}
 		else
