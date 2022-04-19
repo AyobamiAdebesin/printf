@@ -1,5 +1,4 @@
 #include "main.h"
-
 #include <stdio.h>
 #include <stdarg.h>
 
@@ -54,11 +53,7 @@ int _printf(const char *format, ...)
 	if (format == NULL)
 		return (0);
 	va_start(arg, format);
-<<<<<<< HEAD
 	for (i = 0; *(format + i) != '\0'; i++)
-=======
-	for (i = 0;  *(format + i) != '\0'; i++)
->>>>>>> 1821d99afea660dd6f9aebaaf23b1e0f40515aaf
 	{
 		if (format[i] == '%')
 		{
