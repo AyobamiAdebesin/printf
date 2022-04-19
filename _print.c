@@ -65,14 +65,14 @@ int _printf(const char *format, ...)
 					j = va_arg(arg, int);
 					len1 += 1;
 					_putchar(j);
-					break; }
+					break;
+				}
 				case 's':{
 					s = va_arg(arg, char *);
 					len2 += _strlen(s);
 					_puts(s);
 					break; }
 				case '%':{
-					j = va_arg(arg, int);
 					_putchar('%');
 					len1 += 1;
 					break; }
