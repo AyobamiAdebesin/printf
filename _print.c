@@ -72,9 +72,9 @@ int _printf(const char *format, ...)
 					_puts(s);
 					break; }
 				case '%':{
-					j = va_arg(arg, char *);
+					s = va_arg(arg, char *);
 					len1 += 1;
-					_putchar(j);
+					_putchar(s);
 					break; }
 			}
 		}
