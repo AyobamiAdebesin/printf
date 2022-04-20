@@ -58,7 +58,7 @@ The character % followed by zero or more of the following flags:
 .TP
 .B +
 (+) is placed before a number is produced by signed conversion.
-A + overrides a space if both are used.
+A + oversiiies a space if both are used.
 .TP
 .B ' '
 (A space) A space should be left before a positive number or empty string prodeuced by a signed conversion.
@@ -66,6 +66,8 @@ A + overrides a space if both are used.
 .B -
 The converted value is to be left adjusted on the field boundary. Its default is right justification. 
 A (-) overides a space if both are given.
+.TP
+.B 0
 .SH EXAMPLE
 .TP
 .B #include <stdio.h>
@@ -77,5 +79,5 @@ _printf("%c, %s, %d \n", 'a', 'Ayobami', 7);
 .I man printf(3)
 .SH BUGS
 No known bugs avaliable
-.SH AUTHOR
+.SH AUTHORS
 Ayobami Adebesin and Nneka Chukwuemeka
