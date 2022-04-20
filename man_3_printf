@@ -58,6 +58,8 @@ A + overrides a space if both are used.
 (A space) A space should be left before a positive number or empty string prodeuced by a signed conversion.
 .TP
 .B -
+The converted value is to be left adjusted on the field boundary. Its default is right justification. 
+A (-) overides a space if both are given.
 .SH EXAMPLE
 #include <stdio.h>
 #include "main.h"
