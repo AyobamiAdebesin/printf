@@ -61,8 +61,10 @@ A + overrides a space if both are used.
 The converted value is to be left adjusted on the field boundary. Its default is right justification. 
 A (-) overides a space if both are given.
 .SH EXAMPLE
-#include <stdio.h>
-#include "main.h"
+.TP
+.B #include <stdio.h>
+.TP
+.B #include "main.h"
 
 _printf("%c, %s, %d \n", 'a', 'Ayobami', 7);
 .SH SEE ALSO
