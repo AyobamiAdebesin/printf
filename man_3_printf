@@ -3,24 +3,58 @@
 .SH NAME
 _printf(3)
 .SH SYNOPSIS
-#include <stdio.h>
-#include "main.h"
+.B #include <stdio.h>
+.TP
+.B #include "main.h"
 
-int _printf(const char *format, ...);
+.B int _printf(const char *format, ...);
 .SH DESCRIPTION
 A function that products output according to a format string.
 It specifies the variable length and convert it to output.
 Format string is a character string that begins and ends in its initial state. It start its conversion with introduction of %.
-.SH OPTIONS
-.IP -c
-prints character
-.IP -s
-prints string
-.IP -u
+.SH RETURN VALUE
+On success, it returns the number of characters
+printed, excluding the null byte to the output.
+.SH Conversion Specifiers
+A character that shows the type of conversion applied
+.TP
+.BR c
+prints a character
+.TP
+.BR s
+print string
+.TP
+.BR d
+print decimal integer
+.TP
+.BR u
 prints unsigned decimal integer
-.IP -X 
+.TP 
+.BR x, X 
 print unsigned hexadecimal integer
-.IP -x
-also prints unsigned hexadecimal integer
-.SH AUTHORS
-(Nneka Chukwuemeka and Ayobami Adebesin)
+.TP
+.BR o, b
+print unsigned octal notation (o) or binary notation (b).
+.TP
+.B p
+Address is printed in hexadecimal
+.TP
+.B r
+Prints a string in reverse
+.TP
+.B R
+prints a string converted to rot13
+.TP
+.B %
+A '%' is written but no argument is converted. To be able to print % type '%%'
+.SH EXAMPLE
+#include <stdio.h>
+#include "main.h"
+
+_printf("%c, %s, %d \n", 'a', 'Ayobami', 7);
+.SH SEE ALSO
+.I man printf(3)
+.SH BUGS
+No known bugs avaliable
+.SH AUTHOR
+Ayobami Adebesin and Nneka Chukwuemeka
