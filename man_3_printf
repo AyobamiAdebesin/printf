@@ -69,7 +69,8 @@ A (-) overides a space if both are given.
 .TP
 .B 0
 Zero is padded for d, i, o, u, x, X, a. 
-The converted value is padded on the left with zeros rather than blanks
+The converted value is padded on the left with zeros rather than blanks.
+A - overrides the 0 flag if both apper together
 .SH EXAMPLE
 .TP
 .B #include <stdio.h>
