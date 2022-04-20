@@ -47,6 +47,8 @@ prints a string converted to rot13
 .TP
 .B %
 A '%' is written but no argument is converted. To be able to print % type '%%'
+.SH Flag Character
+The character % followed by zero or more of the following flags:
 .SH EXAMPLE
 #include <stdio.h>
 #include "main.h"
