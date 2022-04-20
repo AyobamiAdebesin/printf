@@ -56,6 +56,8 @@ A + overrides a space if both are used.
 .TP
 .B ' '
 (A space) A space should be left before a positive number or empty string prodeuced by a signed conversion.
+.TP
+.B -
 .SH EXAMPLE
 #include <stdio.h>
 #include "main.h"
