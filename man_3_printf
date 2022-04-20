@@ -49,6 +49,10 @@ prints a string converted to rot13
 A '%' is written but no argument is converted. To be able to print % type '%%'
 .SH Flag Character
 The character % followed by zero or more of the following flags:
+.TP
+.B +
+(+) is placed before a number is produced by signed conversion.
+A + overrides a space if both are used.
 .SH EXAMPLE
 #include <stdio.h>
 #include "main.h"
