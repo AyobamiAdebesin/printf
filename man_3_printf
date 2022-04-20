@@ -68,6 +68,8 @@ The converted value is to be left adjusted on the field boundary. Its default is
 A (-) overides a space if both are given.
 .TP
 .B 0
+Zero is padded for d, i, o, u, x, X, a. 
+The converted value is padded on the left with zeros rather than blanks
 .SH EXAMPLE
 .TP
 .B #include <stdio.h>
