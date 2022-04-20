@@ -17,6 +17,10 @@ On success, it returns the number of characters
 printed, excluding the null byte to the output.
 .SH Format of format string
 The format string is made of zero (0) and other more directives such as: ordinary characters (not %). It depends on the conversion. Apart fo this order there maybe zero or other flags, a field width, precision or length modifier.
+.TP
+The syntax
+
+%[$]flags[width][.precision][length modifier]conversion
 .SH Conversion Specifiers
 A character that shows the type of conversion applied
 .TP
